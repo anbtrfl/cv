@@ -1,4 +1,5 @@
 import { Card, CardContent, Chip, Stack, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const cardSx = {
   transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
@@ -9,11 +10,13 @@ const cardSx = {
 };
 
 export default function ExperienceSection() {
+  const { t } = useTranslation();
+
   return (
     <section id="experience" className="section" aria-labelledby="experience-title">
       <Stack spacing={2}>
         <Typography variant="h2" id="experience-title">
-          Experience
+          {t('sections.experience.title')}
         </Typography>
         <Stack spacing={2}>
           <Card variant="outlined" sx={cardSx} component="article">
@@ -25,21 +28,32 @@ export default function ExperienceSection() {
                   justifyContent="space-between"
                   alignItems={{ xs: 'flex-start', sm: 'center' }}
                 >
-                  <Typography variant="subtitle1">
-                    Senior Frontend Engineer · Product Platform
+                  <Typography variant="subtitle1" sx={{ minWidth: 0 }}>
+                    {t('sections.experience.role1.title')}
                   </Typography>
                   <Typography color="text.secondary" variant="caption">
-                    2021 — Present
+                    {t('sections.experience.role1.period')}
                   </Typography>
                 </Stack>
                 <Typography color="text.secondary" variant="body2">
-                  Led UI platform work for a multi-team SaaS suite, building shared components,
-                  navigation patterns, and theming primitives for consistent delivery.
+                  {t('sections.experience.role1.summary')}
                 </Typography>
                 <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
-                  <Chip label="Design system" size="small" variant="outlined" />
-                  <Chip label="Performance" size="small" variant="outlined" />
-                  <Chip label="Accessibility" size="small" variant="outlined" />
+                  <Chip
+                    label={t('sections.experience.role1.chips.designSystem')}
+                    size="small"
+                    variant="outlined"
+                  />
+                  <Chip
+                    label={t('sections.experience.role1.chips.performance')}
+                    size="small"
+                    variant="outlined"
+                  />
+                  <Chip
+                    label={t('sections.experience.role1.chips.accessibility')}
+                    size="small"
+                    variant="outlined"
+                  />
                 </Stack>
               </Stack>
             </CardContent>
@@ -54,19 +68,32 @@ export default function ExperienceSection() {
                   justifyContent="space-between"
                   alignItems={{ xs: 'flex-start', sm: 'center' }}
                 >
-                  <Typography variant="subtitle1">Frontend Engineer · Analytics Suite</Typography>
+                  <Typography variant="subtitle1" sx={{ minWidth: 0 }}>
+                    {t('sections.experience.role2.title')}
+                  </Typography>
                   <Typography color="text.secondary" variant="caption">
-                    2018 — 2021
+                    {t('sections.experience.role2.period')}
                   </Typography>
                 </Stack>
                 <Typography color="text.secondary" variant="body2">
-                  Built data-heavy dashboards with configurable widgets, improving clarity for
-                  finance and operations teams while keeping interfaces fast.
+                  {t('sections.experience.role2.summary')}
                 </Typography>
                 <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
-                  <Chip label="Data viz" size="small" variant="outlined" />
-                  <Chip label="Role-based UI" size="small" variant="outlined" />
-                  <Chip label="Design ops" size="small" variant="outlined" />
+                  <Chip
+                    label={t('sections.experience.role2.chips.dataViz')}
+                    size="small"
+                    variant="outlined"
+                  />
+                  <Chip
+                    label={t('sections.experience.role2.chips.roleBasedUi')}
+                    size="small"
+                    variant="outlined"
+                  />
+                  <Chip
+                    label={t('sections.experience.role2.chips.designOps')}
+                    size="small"
+                    variant="outlined"
+                  />
                 </Stack>
               </Stack>
             </CardContent>

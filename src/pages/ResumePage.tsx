@@ -1,5 +1,6 @@
 import { Box, Container, Stack } from '@mui/material';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Sidebar from '../components/Sidebar';
 import AboutSection from '../sections/AboutSection';
 import ContactsSection from '../sections/ContactsSection';
@@ -10,18 +11,21 @@ import HeaderSection from '../sections/HeaderSection';
 import ProjectsSection from '../sections/ProjectsSection';
 import SkillsSection from '../sections/SkillsSection';
 
-const sections = [
-  { id: 'header', label: 'Overview' },
-  { id: 'about', label: 'About' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'experience', label: 'Experience' },
-  { id: 'education', label: 'Education' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'contacts', label: 'Contacts' },
-  { id: 'footer', label: 'Footer' },
-];
-
 export default function ResumePage() {
+  const { t, i18n } = useTranslation();
+  const sections = useMemo(
+    () => [
+      { id: 'header', label: t('navigation.header') },
+      { id: 'about', label: t('navigation.about') },
+      { id: 'skills', label: t('navigation.skills') },
+      { id: 'experience', label: t('navigation.experience') },
+      { id: 'education', label: t('navigation.education') },
+      { id: 'projects', label: t('navigation.projects') },
+      { id: 'contacts', label: t('navigation.contacts') },
+      { id: 'footer', label: t('navigation.footer') },
+    ],
+    [i18n.language, t]
+  );
   const [activeSectionId, setActiveSectionId] = useState(sections[0].id);
 
   useEffect(() => {
@@ -52,12 +56,12 @@ export default function ResumePage() {
     observedSections.forEach((section) => observer.observe(section));
 
     return () => observer.disconnect();
-  }, []);
+  }, [sections]);
 
   return (
     <Box sx={{ minHeight: '100vh' }}>
       <a href="#content" className="skip-link">
-        Skip to content
+        {t('actions.skipToContent')}
       </a>
       <Container maxWidth="lg" sx={{ py: { xs: 6, md: 10 } }}>
         <Stack

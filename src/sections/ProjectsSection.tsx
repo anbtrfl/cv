@@ -1,4 +1,5 @@
 import { Card, CardContent, Chip, Stack, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const cardSx = {
   transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
@@ -9,11 +10,13 @@ const cardSx = {
 };
 
 export default function ProjectsSection() {
+  const { t } = useTranslation();
+
   return (
     <section id="projects" className="section" aria-labelledby="projects-title">
       <Stack spacing={2}>
         <Typography variant="h2" id="projects-title">
-          Projects
+          {t('sections.projects.title')}
         </Typography>
         <Stack spacing={2}>
           <Card variant="outlined" sx={cardSx} component="article">
@@ -25,19 +28,32 @@ export default function ProjectsSection() {
                   justifyContent="space-between"
                   alignItems={{ xs: 'flex-start', sm: 'center' }}
                 >
-                  <Typography variant="subtitle1">Insight Dashboard</Typography>
+                  <Typography variant="subtitle1" sx={{ minWidth: 0 }}>
+                    {t('sections.projects.project1.title')}
+                  </Typography>
                   <Typography color="text.secondary" variant="caption">
-                    2024
+                    {t('sections.projects.project1.period')}
                   </Typography>
                 </Stack>
                 <Typography color="text.secondary" variant="body2">
-                  Modular analytics interface with reusable filters, chart primitives, and export
-                  flows tailored for operations teams.
+                  {t('sections.projects.project1.summary')}
                 </Typography>
                 <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
-                  <Chip label="React" size="small" variant="outlined" />
-                  <Chip label="TypeScript" size="small" variant="outlined" />
-                  <Chip label="REST APIs" size="small" variant="outlined" />
+                  <Chip
+                    label={t('sections.projects.project1.chips.react')}
+                    size="small"
+                    variant="outlined"
+                  />
+                  <Chip
+                    label={t('sections.projects.project1.chips.typescript')}
+                    size="small"
+                    variant="outlined"
+                  />
+                  <Chip
+                    label={t('sections.projects.project1.chips.rest')}
+                    size="small"
+                    variant="outlined"
+                  />
                 </Stack>
               </Stack>
             </CardContent>
@@ -52,19 +68,32 @@ export default function ProjectsSection() {
                   justifyContent="space-between"
                   alignItems={{ xs: 'flex-start', sm: 'center' }}
                 >
-                  <Typography variant="subtitle1">Design System Starter</Typography>
+                  <Typography variant="subtitle1" sx={{ minWidth: 0 }}>
+                    {t('sections.projects.project2.title')}
+                  </Typography>
                   <Typography color="text.secondary" variant="caption">
-                    2023
+                    {t('sections.projects.project2.period')}
                   </Typography>
                 </Stack>
                 <Typography color="text.secondary" variant="body2">
-                  Component library foundation with tokens, accessible patterns, and documentation
-                  templates for fast onboarding.
+                  {t('sections.projects.project2.summary')}
                 </Typography>
                 <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
-                  <Chip label="UI kit" size="small" variant="outlined" />
-                  <Chip label="Docs" size="small" variant="outlined" />
-                  <Chip label="Accessibility" size="small" variant="outlined" />
+                  <Chip
+                    label={t('sections.projects.project2.chips.uiKit')}
+                    size="small"
+                    variant="outlined"
+                  />
+                  <Chip
+                    label={t('sections.projects.project2.chips.docs')}
+                    size="small"
+                    variant="outlined"
+                  />
+                  <Chip
+                    label={t('sections.projects.project2.chips.accessibility')}
+                    size="small"
+                    variant="outlined"
+                  />
                 </Stack>
               </Stack>
             </CardContent>
@@ -79,19 +108,32 @@ export default function ProjectsSection() {
                   justifyContent="space-between"
                   alignItems={{ xs: 'flex-start', sm: 'center' }}
                 >
-                  <Typography variant="subtitle1">Workflow Builder</Typography>
+                  <Typography variant="subtitle1" sx={{ minWidth: 0 }}>
+                    {t('sections.projects.project3.title')}
+                  </Typography>
                   <Typography color="text.secondary" variant="caption">
-                    2022
+                    {t('sections.projects.project3.period')}
                   </Typography>
                 </Stack>
                 <Typography color="text.secondary" variant="body2">
-                  Visual editor for multi-step automation flows, featuring validation states and
-                  stakeholder-ready previews.
+                  {t('sections.projects.project3.summary')}
                 </Typography>
                 <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
-                  <Chip label="Drag and drop" size="small" variant="outlined" />
-                  <Chip label="UX flows" size="small" variant="outlined" />
-                  <Chip label="Collaboration" size="small" variant="outlined" />
+                  <Chip
+                    label={t('sections.projects.project3.chips.dragDrop')}
+                    size="small"
+                    variant="outlined"
+                  />
+                  <Chip
+                    label={t('sections.projects.project3.chips.uxFlows')}
+                    size="small"
+                    variant="outlined"
+                  />
+                  <Chip
+                    label={t('sections.projects.project3.chips.collaboration')}
+                    size="small"
+                    variant="outlined"
+                  />
                 </Stack>
               </Stack>
             </CardContent>

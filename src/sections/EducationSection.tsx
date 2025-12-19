@@ -1,11 +1,14 @@
 import { Card, CardContent, Stack, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 export default function EducationSection() {
+  const { t } = useTranslation();
+
   return (
     <section id="education" className="section" aria-labelledby="education-title">
       <Stack spacing={2}>
         <Typography variant="h2" id="education-title">
-          Education
+          {t('sections.education.title')}
         </Typography>
         <Stack spacing={2}>
           <Card variant="outlined" component="article">
@@ -17,14 +20,15 @@ export default function EducationSection() {
                   justifyContent="space-between"
                   alignItems={{ xs: 'flex-start', sm: 'center' }}
                 >
-                  <Typography variant="subtitle1">B.Sc. in Computer Science</Typography>
+                  <Typography variant="subtitle1" sx={{ minWidth: 0 }}>
+                    {t('sections.education.degree.title')}
+                  </Typography>
                   <Typography color="text.secondary" variant="caption">
-                    2014 — 2018
+                    {t('sections.education.degree.period')}
                   </Typography>
                 </Stack>
                 <Typography color="text.secondary" variant="body2">
-                  Focus on human-computer interaction, software architecture, and applied
-                  problem-solving.
+                  {t('sections.education.degree.summary')}
                 </Typography>
               </Stack>
             </CardContent>
@@ -39,13 +43,15 @@ export default function EducationSection() {
                   justifyContent="space-between"
                   alignItems={{ xs: 'flex-start', sm: 'center' }}
                 >
-                  <Typography variant="subtitle1">Professional Courses</Typography>
+                  <Typography variant="subtitle1" sx={{ minWidth: 0 }}>
+                    {t('sections.education.courses.title')}
+                  </Typography>
                   <Typography color="text.secondary" variant="caption">
-                    2019 — 2023
+                    {t('sections.education.courses.period')}
                   </Typography>
                 </Stack>
                 <Typography color="text.secondary" variant="body2">
-                  Web performance, accessible design, advanced TypeScript practices.
+                  {t('sections.education.courses.summary')}
                 </Typography>
               </Stack>
             </CardContent>

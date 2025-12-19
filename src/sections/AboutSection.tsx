@@ -1,23 +1,23 @@
 import { Card, CardContent, Stack, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 export default function AboutSection() {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="section" aria-labelledby="about-title">
       <Stack spacing={2}>
         <Typography variant="h2" id="about-title">
-          About
+          {t('sections.about.title')}
         </Typography>
         <Card variant="outlined">
           <CardContent>
             <Stack spacing={2}>
               <Typography color="text.secondary" variant="body2">
-                Frontend developer with experience across SaaS platforms, analytics suites, and
-                internal tools. Focused on reliable UI architecture and collaboration between
-                product, design, and engineering.
+                {t('sections.about.body1')}
               </Typography>
               <Typography color="text.secondary" variant="body2">
-                Interested in performance, accessibility, and building interfaces that feel calm,
-                fast, and consistent for users.
+                {t('sections.about.body2')}
               </Typography>
             </Stack>
           </CardContent>
