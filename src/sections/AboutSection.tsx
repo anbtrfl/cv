@@ -1,28 +1,28 @@
-import { Card, CardContent, Container, Stack, Typography } from '@mui/material';
+import { Card, CardContent, Stack, Typography } from '@mui/material';
 
 export default function AboutSection() {
   return (
     <section id="about" className="section" aria-labelledby="about-title">
-      <Container>
+      <Stack spacing={2}>
+        <Typography variant="h2" id="about-title">
+          About
+        </Typography>
         <Card variant="outlined">
           <CardContent>
             <Stack spacing={2}>
-              <Typography variant="h2" id="about-title">
-                About
+              <Typography color="text.secondary" variant="body2">
+                Frontend developer with experience across SaaS platforms, analytics suites, and
+                internal tools. Focused on reliable UI architecture and collaboration between
+                product, design, and engineering.
               </Typography>
-              <Typography>
-                Frontend engineer with experience in SaaS products, enterprise dashboards, and
-                internal platforms. Focused on maintainable architecture, accessibility, and
-                performance.
-              </Typography>
-              <Typography>
-                Comfortable collaborating with design and backend teams to ship cohesive
-                experiences, from discovery to production support.
+              <Typography color="text.secondary" variant="body2">
+                Interested in performance, accessibility, and building interfaces that feel calm,
+                fast, and consistent for users.
               </Typography>
             </Stack>
           </CardContent>
         </Card>
-      </Container>
+      </Stack>
     </section>
   );
 }

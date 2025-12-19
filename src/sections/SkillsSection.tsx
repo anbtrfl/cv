@@ -1,37 +1,47 @@
-import { Card, CardContent, Container, Stack, Typography } from '@mui/material';
+import { Box, Card, CardContent, Stack, Typography } from '@mui/material';
 
 export default function SkillsSection() {
   return (
     <section id="skills" className="section" aria-labelledby="skills-title">
-      <Container>
-        <Card variant="outlined">
-          <CardContent>
-            <Stack spacing={2}>
-              <Typography variant="h2" id="skills-title">
-                Skills
-              </Typography>
-              <Stack component="ul" spacing={1} sx={{ pl: 2, m: 0 }}>
-                <Typography component="li">
-                  React, TypeScript, Vite, modern JavaScript
+      <Stack spacing={2}>
+        <Typography variant="h2" id="skills-title">
+          Skills
+        </Typography>
+        <Box
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
+            gap: 2,
+          }}
+        >
+          <Card variant="outlined">
+            <CardContent>
+              <Stack spacing={1.5}>
+                <Typography variant="subtitle1">Frontend</Typography>
+                <Typography color="text.secondary" variant="body2">
+                  React 18, TypeScript, Vite, component architecture, state patterns.
                 </Typography>
-                <Typography component="li">
-                  UI architecture, component libraries, design systems
+                <Typography color="text.secondary" variant="body2">
+                  Semantic HTML, accessibility-first UI, responsive layouts.
                 </Typography>
-                <Typography component="li">
-                  Accessibility (WCAG), semantic HTML, keyboard navigation
-                </Typography>
-                <Typography component="li">
-                  State management patterns, API integration, data fetching
-                </Typography>
-                <Typography component="li">
-                  Testing mindset: unit, integration, visual review
-                </Typography>
-                <Typography component="li">CI/CD, code review, documentation</Typography>
               </Stack>
-            </Stack>
-          </CardContent>
-        </Card>
-      </Container>
+            </CardContent>
+          </Card>
+          <Card variant="outlined">
+            <CardContent>
+              <Stack spacing={1.5}>
+                <Typography variant="subtitle1">Workflow</Typography>
+                <Typography color="text.secondary" variant="body2">
+                  API integration, data modeling, form orchestration, documentation.
+                </Typography>
+                <Typography color="text.secondary" variant="body2">
+                  Testing mindset, code reviews, design collaboration.
+                </Typography>
+              </Stack>
+            </CardContent>
+          </Card>
+        </Box>
+      </Stack>
     </section>
   );
 }
