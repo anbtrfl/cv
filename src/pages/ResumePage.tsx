@@ -65,8 +65,16 @@ export default function ResumePage() {
           spacing={{ xs: 6, lg: 12 }}
           alignItems="flex-start"
         >
-          <Box sx={{ position: { lg: 'sticky' }, top: { lg: 48 }, width: { lg: 280 } }}>
-            <Sidebar sections={sections} activeSectionId={activeSectionId} />
+          <Box sx={{ width: { xs: '100%', lg: 280 }, flexShrink: 0 }}>
+            <Box
+              sx={{
+                position: { lg: 'fixed' },
+                top: { lg: 80 },
+                width: { lg: 280 },
+              }}
+            >
+              <Sidebar sections={sections} activeSectionId={activeSectionId} />
+            </Box>
           </Box>
           <Box
             component="main"
