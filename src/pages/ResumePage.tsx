@@ -15,14 +15,11 @@ export default function ResumePage() {
   const { t, i18n } = useTranslation();
   const sections = useMemo(
     () => [
-      { id: 'header', label: t('navigation.header') },
       { id: 'about', label: t('navigation.about') },
       { id: 'skills', label: t('navigation.skills') },
       { id: 'experience', label: t('navigation.experience') },
       { id: 'education', label: t('navigation.education') },
       { id: 'projects', label: t('navigation.projects') },
-      { id: 'contacts', label: t('navigation.contacts') },
-      { id: 'footer', label: t('navigation.footer') },
     ],
     [i18n.language, t]
   );
