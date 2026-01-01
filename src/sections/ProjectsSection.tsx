@@ -35,7 +35,7 @@ export default function ProjectsSection() {
                     {t('sections.projects.project1.period')}
                   </Typography>
                 </Stack>
-                <Typography color="text.secondary" variant="body2">
+                <Typography color="text.secondary" variant="body2" sx={{ whiteSpace: 'pre-line' }}>
                   {t('sections.projects.project1.summary')}
                 </Typography>
                 <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
@@ -75,7 +75,7 @@ export default function ProjectsSection() {
                     {t('sections.projects.project2.period')}
                   </Typography>
                 </Stack>
-                <Typography color="text.secondary" variant="body2">
+                <Typography color="text.secondary" variant="body2" sx={{ whiteSpace: 'pre-line' }}>
                   {t('sections.projects.project2.summary')}
                 </Typography>
                 <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">

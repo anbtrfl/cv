@@ -35,7 +35,7 @@ export default function ExperienceSection() {
                     {t('sections.experience.role1.period')}
                   </Typography>
                 </Stack>
-                <Typography color="text.secondary" variant="body2">
+                <Typography color="text.secondary" variant="body2" sx={{ whiteSpace: 'pre-line' }}>
                   {t('sections.experience.role1.summary')}
                 </Typography>
                 <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
@@ -75,7 +75,7 @@ export default function ExperienceSection() {
                     {t('sections.experience.role2.period')}
                   </Typography>
                 </Stack>
-                <Typography color="text.secondary" variant="body2">
+                <Typography color="text.secondary" variant="body2" sx={{ whiteSpace: 'pre-line' }}>
                   {t('sections.experience.role2.summary')}
                 </Typography>
                 <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">

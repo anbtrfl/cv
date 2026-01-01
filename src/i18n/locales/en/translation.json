@@ -44,24 +44,40 @@
     },
     "about": {
       "title": "About",
-      "body1": "Built internationalized React and Next.js marketing websites (SSR/SSG) from Figma with reusable components and improved Lighthouse metrics.",
-      "body2": "Optimized performance by removing redundant JavaScript chunks, reducing network requests, and improving media delivery; integrated backend APIs with Keycloak authentication and robust loading and error handling."
+      "body1": "Frontend developer focused on building clean and well-crafted user interfaces. The main area of interest is UI development — pixel-perfect implementation, attention to visual and interaction details, and structured, maintainable layout.",
+      "body2": "In commercial projects, I work with React and Next.js, implementing interfaces from Figma designs. My work includes component structure, accessibility, internationalization, and API interaction logic. The goal is to deliver clear, stable, and user-friendly interfaces.",
+      "body3": "I pay close attention to frontend quality and performance, regularly working with Lighthouse metrics, optimizing page loading and resource handling, and carefully implementing loading and error states. Strong attention to detail is a key part of my approach.",
+      "body4": "Alongside development, I mentor students in frontend development. Outside of work, I enjoy running and cycling."
     },
     "skills": {
       "title": "Skills",
-      "frontend": "Frontend",
-      "frontendBody1": "HTML5, CSS3, JavaScript (ES6+).",
-      "frontendBody2": "React, Next.js (SSR/SSG), TypeScript.",
-      "workflow": "Layout & UI",
-      "workflowBody1": "Material UI, responsive design, accessibility.",
-      "workflowBody2": "Git, npm, Figma, DevTools."
+      "core": "Frontend / Core",
+      "coreBody1": "HTML5",
+      "coreBody2": "CSS3",
+      "coreBody3": "JavaScript (ES6+)",
+      "coreBody4": "React",
+      "coreBody5": "Next.js",
+      "coreBody6": "TypeScript",
+      "ui": "UI & Layout",
+      "uiBody1": "Pixel-perfect",
+      "uiBody2": "Responsiveness",
+      "uiBody3": "a11y",
+      "uiBody4": "Design systems",
+      "uiBody5": "MUI",
+      "workflow": "Workflow & Tooling",
+      "workflowBody1": "Git",
+      "workflowBody2": "npm",
+      "workflowBody3": "Figma",
+      "workflowBody4": "DevTools",
+      "workflowBody5": "Lighthouse",
+      "workflowBody6": "SEO basics"
     },
     "experience": {
       "title": "Experience",
       "role1": {
         "title": "Frontend Developer · EXPLYT, VEAI",
         "period": "Apr 2025 – present",
-        "summary": "Worked on frontend development for a commercial AI-powered IDE plugin, covering SEO-oriented marketing websites and authenticated user interfaces. Built internationalized React/Next.js sites with reusable components; improved Lighthouse metrics, performance, caching, and media delivery; integrated backend APIs and Keycloak auth with robust loading and error handling.",
+        "summary": "Frontend development for an AI-powered IDE plugin (B2B and B2C), including marketing websites and authenticated user interfaces.\n\nMarketing websites were built with React and Next.js using a multi-page, reusable component-based approach. The scope included responsive layout, internationalization, SEO optimization, and performance improvements with a focus on Lighthouse metrics.\n\nAuthenticated user interfaces were closely integrated with the backend, covering subscription states, user balance, and payment-related flows. The work involved handling loading and error states, as well as complex display logic depending on region, language, currency, and available payment methods. UI structure and interaction logic were designed on the frontend side.\n\nAlso contributed to maintaining plugin documentation using Docusaurus.",
         "chips": {
           "designSystem": "React/Next.js",
           "performance": "Performance",
@@ -71,7 +87,7 @@
       "role2": {
         "title": "Frontend Course Mentor · ITMO University",
         "period": "Sept 2025 – present",
-        "summary": "Mentored undergraduate students in frontend development with a focus on layout correctness, JavaScript fundamentals, and practical engineering skills. Reviewed assignments with structured feedback on semantic HTML, CSS organization, layout accuracy, and JavaScript logic; designed a pixel-perfect layout assignment with automated visual tests.",
+        "summary": "Mentored students in frontend development as part of a university course. Reviewed and assessed assignments with a focus on semantic HTML, CSS structure, and JavaScript logic.\n\nContributed to course materials and delivered frontend lectures. Designed a responsive layout assignment with pixel-perfect validation based on Figma screenshots, including automated visual comparison.",
         "chips": {
           "dataViz": "Mentoring",
           "roleBasedUi": "Reviews",
@@ -87,9 +103,9 @@
         "summary": "Undergraduate program in computer technologies."
       },
       "courses": {
-        "title": "Relevant Courses",
+        "title": "Relevant coursework",
         "period": "",
-        "summary": "Frontend Development Advanced Course; Web Development; Algorithms and Data Structures; JavaScript Course."
+        "summary": "Web Development · Algorithms and Data Structures · JavaScript · Advanced Frontend Development"
       }
     },
     "projects": {
@@ -97,7 +113,7 @@
       "project1": {
         "title": "React Course Platform",
         "period": "",
-        "summary": "Educational web platform for hosting React courses with hierarchical structure (courses, modules, lectures). Designed a reusable component architecture and implemented typed data access with backend emulation for predictable state management and independent frontend development.",
+        "summary": "Educational web platform for hosting React courses with a hierarchical structure of courses, modules, and lectures. The frontend was built with React, focusing on reusable components and a predictable UI structure. The interface architecture was designed to support multiple levels of nesting and clear navigation between course content. Typed data handling was implemented, with backend behavior emulated to enable independent frontend development. The main focus was on structured UI, clear interface states, and component scalability.",
         "chips": {
           "react": "React",
           "typescript": "Component architecture",
@@ -107,7 +123,7 @@
       "project2": {
         "title": "Project Management System",
         "period": "",
-        "summary": "Frontend application for managing projects and tasks using board-based workflows. Built status-driven columns with smooth client-side navigation and implemented drag-and-drop flows with search, filtering, async data handling, and robust error states.",
+        "summary": "Frontend application for managing projects and tasks using board-based workflows. Implemented a status-driven board interface with task creation, editing, and movement between columns. Particular attention was paid to user flows, loading states, and seamless UI updates without full page reloads. The project focused on clean UI implementation, asynchronous data handling, search and filtering, and robust error and edge-case handling.",
         "chips": {
           "uiKit": "Drag and drop",
           "docs": "Async data",

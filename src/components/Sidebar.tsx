@@ -10,9 +10,10 @@ type SectionLink = {
 type SidebarProps = {
   sections: SectionLink[];
   activeSectionId: string;
+  onSectionSelect?: (sectionId: string) => void;
 };
 
-export default function Sidebar({ sections, activeSectionId }: SidebarProps) {
+export default function Sidebar({ sections, activeSectionId, onSectionSelect }: SidebarProps) {
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.resolvedLanguage ?? i18n.language;
   const isRussian = currentLanguage?.startsWith('ru');
@@ -111,6 +112,7 @@ export default function Sidebar({ sections, activeSectionId }: SidebarProps) {
               key={section.id}
               href={`#${section.id}`}
               aria-current={isActive ? 'true' : undefined}
+              onClick={() => onSectionSelect?.(section.id)}
               sx={{
                 display: 'flex',
                 alignItems: 'center',

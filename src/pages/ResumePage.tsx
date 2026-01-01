@@ -1,5 +1,5 @@
 import { Box, Container, Stack } from '@mui/material';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Sidebar from '../components/Sidebar';
 import AboutSection from '../sections/AboutSection';
@@ -16,14 +16,21 @@ export default function ResumePage() {
   const sections = useMemo(
     () => [
       { id: 'about', label: t('navigation.about') },
-      { id: 'skills', label: t('navigation.skills') },
       { id: 'experience', label: t('navigation.experience') },
-      { id: 'education', label: t('navigation.education') },
       { id: 'projects', label: t('navigation.projects') },
+      { id: 'education', label: t('navigation.education') },
+      { id: 'skills', label: t('navigation.skills') },
     ],
     [i18n.language, t]
   );
   const [activeSectionId, setActiveSectionId] = useState(sections[0].id);
+  const scrollLockRef = useRef<{ targetId: string; expiresAt: number } | null>(null);
+
+  const handleSectionSelect = (sectionId: string) => {
+    const lockDurationMs = 2000;
+    scrollLockRef.current = { targetId: sectionId, expiresAt: Date.now() + lockDurationMs };
+    setActiveSectionId(sectionId);
+  };
 
   useEffect(() => {
     const observedSections = sections
@@ -34,25 +41,64 @@ export default function ResumePage() {
       return;
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSectionId((current) =>
-              current === entry.target.id ? current : entry.target.id
-            );
+    const scrollOffset = 120;
+    const updateActiveSection = () => {
+      const scrollPosition = window.scrollY + scrollOffset;
+      const scrollLock = scrollLockRef.current;
+      if (scrollLock?.targetId) {
+        const targetSection = observedSections.find(
+          (section) => section.id === scrollLock.targetId
+        );
+        if (!targetSection) {
+          scrollLockRef.current = null;
+        } else {
+          const targetTop = targetSection.offsetTop;
+          const targetBottom = targetTop + targetSection.offsetHeight;
+          const hasReachedTarget =
+            scrollPosition >= targetTop && scrollPosition <= targetBottom;
+
+          if (!hasReachedTarget && Date.now() < scrollLock.expiresAt) {
+            return;
           }
-        });
-      },
-      {
-        rootMargin: '-35% 0px -55% 0px',
-        threshold: 0.1,
+          scrollLockRef.current = null;
+        }
       }
-    );
 
-    observedSections.forEach((section) => observer.observe(section));
+      let currentSectionId = observedSections[0].id;
 
-    return () => observer.disconnect();
+      for (const section of observedSections) {
+        if (section.offsetTop <= scrollPosition) {
+          currentSectionId = section.id;
+        } else {
+          break;
+        }
+      }
+
+      setActiveSectionId((current) =>
+            current === currentSectionId ? current : currentSectionId
+          );
+    };
+
+    let isTicking = false;
+    const handleScroll = () => {
+      if (isTicking) {
+        return;
+      }
+      isTicking = true;
+      window.requestAnimationFrame(() => {
+        updateActiveSection();
+        isTicking = false;
+      });
+    };
+
+    updateActiveSection();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
   }, [sections]);
 
   return (
@@ -74,7 +120,11 @@ export default function ResumePage() {
                 width: { lg: 280 },
               }}
             >
-              <Sidebar sections={sections} activeSectionId={activeSectionId} />
+              <Sidebar
+                sections={sections}
+                activeSectionId={activeSectionId}
+                onSectionSelect={handleSectionSelect}
+              />
             </Box>
           </Box>
           <Box
@@ -84,15 +134,15 @@ export default function ResumePage() {
             sx={{ flex: 1, maxWidth: { lg: 760 } }}
           >
             <Stack spacing={6}>
-              <HeaderSection />
+              {/*<HeaderSection />*/}
               <Box>
                 <Box className="sticky-blur" aria-hidden="true" />
                 <Stack spacing={6} className="sticky-blur-content">
                   <AboutSection />
-                  <SkillsSection />
                   <ExperienceSection />
-                  <EducationSection />
                   <ProjectsSection />
+                  <EducationSection />
+                  <SkillsSection />
                   <ContactsSection />
                   <FooterSection />
                 </Stack>

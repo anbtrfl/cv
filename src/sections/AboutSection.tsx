@@ -19,6 +19,12 @@ export default function AboutSection() {
               <Typography color="text.secondary" variant="body2">
                 {t('sections.about.body2')}
               </Typography>
+              <Typography color="text.secondary" variant="body2">
+                {t('sections.about.body3')}
+              </Typography>
+              <Typography color="text.secondary" variant="body2">
+                {t('sections.about.body4')}
+              </Typography>
             </Stack>
           </CardContent>
         </Card>

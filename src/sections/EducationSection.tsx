@@ -1,8 +1,13 @@
-import { Card, CardContent, Stack, Typography } from '@mui/material';
+import { Card, CardContent, Chip, Stack, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 export default function EducationSection() {
   const { t } = useTranslation();
+  const coursesSummary = t('sections.education.courses.summary');
+  const courses = coursesSummary
+    .split('·')
+    .map((course) => course.trim())
+    .filter(Boolean);
 
   return (
     <section id="education" className="section" aria-labelledby="education-title">
@@ -10,9 +15,9 @@ export default function EducationSection() {
         <Typography variant="h2" id="education-title" className="section-title">
           {t('sections.education.title')}
         </Typography>
-        <Stack spacing={2}>
-          <Card variant="outlined" component="article">
-            <CardContent>
+        <Card variant="outlined" component="article">
+          <CardContent>
+            <Stack spacing={2}>
               <Stack spacing={1.5}>
                 <Stack
                   direction={{ xs: 'column', sm: 'row' }}
@@ -31,32 +36,20 @@ export default function EducationSection() {
                   {t('sections.education.degree.summary')}
                 </Typography>
               </Stack>
-            </CardContent>
-          </Card>
 
-          <Card variant="outlined" component="article">
-            <CardContent>
               <Stack spacing={1.5}>
-                <Stack
-                  direction={{ xs: 'column', sm: 'row' }}
-                  spacing={1}
-                  justifyContent="space-between"
-                  alignItems={{ xs: 'flex-start', sm: 'center' }}
-                >
-                  <Typography variant="subtitle1" sx={{ minWidth: 0 }}>
-                    {t('sections.education.courses.title')}
-                  </Typography>
-                  <Typography color="text.secondary" variant="caption">
-                    {t('sections.education.courses.period')}
-                  </Typography>
-                </Stack>
-                <Typography color="text.secondary" variant="body2">
-                  {t('sections.education.courses.summary')}
+                <Typography color="text.secondary" variant="subtitle2">
+                  {t('sections.education.courses.title')}
                 </Typography>
+                <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
+                  {courses.map((course) => (
+                    <Chip key={course} label={course} size="small" variant="outlined" />
+                  ))}
+                </Stack>
               </Stack>
-            </CardContent>
-          </Card>
-        </Stack>
+            </Stack>
+          </CardContent>
+        </Card>
       </Stack>
     </section>
   );
