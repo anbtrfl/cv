@@ -87,7 +87,12 @@ export default function Sidebar({ sections, activeSectionId }: SidebarProps) {
         </Typography>
       </Box>
 
-      <Stack component="nav" spacing={1.5} aria-label="Section navigation">
+      <Stack
+        component="nav"
+        spacing={1.5}
+        aria-label="Section navigation"
+        sx={{ display: { xs: 'none', lg: 'flex' } }}
+      >
         {sections.map((section) => {
           const isActive = section.id === activeSectionId;
 

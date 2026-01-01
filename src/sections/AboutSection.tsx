@@ -7,7 +7,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="section" aria-labelledby="about-title">
       <Stack spacing={2}>
-        <Typography variant="h2" id="about-title">
+        <Typography variant="h2" id="about-title" className="section-title">
           {t('sections.about.title')}
         </Typography>
         <Card variant="outlined">

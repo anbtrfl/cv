@@ -60,7 +60,7 @@ export default function ResumePage() {
       <a href="#content" className="skip-link">
         {t('actions.skipToContent')}
       </a>
-      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 10 } }}>
+      <Container maxWidth="lg" sx={{ py: { xs: 6, lg: 10 } }}>
         <Stack
           direction={{ xs: 'column', lg: 'row' }}
           spacing={{ xs: 6, lg: 12 }}
@@ -81,7 +81,7 @@ export default function ResumePage() {
             component="main"
             id="content"
             tabIndex={-1}
-            sx={{ flex: 1, maxWidth: 760 }}
+            sx={{ flex: 1, maxWidth: { lg: 760 } }}
           >
             <Stack spacing={6}>
               <HeaderSection />

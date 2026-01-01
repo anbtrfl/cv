@@ -15,7 +15,7 @@ export default function ExperienceSection() {
   return (
     <section id="experience" className="section" aria-labelledby="experience-title">
       <Stack spacing={2}>
-        <Typography variant="h2" id="experience-title">
+        <Typography variant="h2" id="experience-title" className="section-title">
           {t('sections.experience.title')}
         </Typography>
         <Stack spacing={2}>

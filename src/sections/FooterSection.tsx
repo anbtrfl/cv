@@ -7,7 +7,7 @@ export default function FooterSection() {
   return (
     <footer id="footer" className="section" aria-labelledby="footer-title">
       <Stack spacing={2}>
-        <Typography variant="h2" id="footer-title">
+        <Typography variant="h2" id="footer-title" className="section-title">
           {t('sections.footer.title')}
         </Typography>
         <Card variant="outlined">

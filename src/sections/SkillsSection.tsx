@@ -7,13 +7,13 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="section" aria-labelledby="skills-title">
       <Stack spacing={2}>
-        <Typography variant="h2" id="skills-title">
+        <Typography variant="h2" id="skills-title" className="section-title">
           {t('sections.skills.title')}
         </Typography>
         <Box
           sx={{
             display: 'grid',
-            gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' },
+            gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' },
             gap: 2,
           }}
         >

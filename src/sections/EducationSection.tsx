@@ -7,7 +7,7 @@ export default function EducationSection() {
   return (
     <section id="education" className="section" aria-labelledby="education-title">
       <Stack spacing={2}>
-        <Typography variant="h2" id="education-title">
+        <Typography variant="h2" id="education-title" className="section-title">
           {t('sections.education.title')}
         </Typography>
         <Stack spacing={2}>

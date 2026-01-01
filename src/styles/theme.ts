@@ -19,6 +19,15 @@ const theme = createTheme({
     },
     divider: 'rgba(148, 163, 184, 0.2)',
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1024,
+      xl: 1536,
+    },
+  },
   typography: {
     fontFamily: '"Space Grotesk", "IBM Plex Sans", "Segoe UI", sans-serif',
     h1: {
