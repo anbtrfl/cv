@@ -53,8 +53,9 @@ const theme = createTheme({
       styleOverrides: {
         body: {
           backgroundImage:
-            'radial-gradient(800px circle at 10% 10%, rgba(100, 255, 218, 0.08), transparent 40%), radial-gradient(900px circle at 90% 0%, rgba(56, 189, 248, 0.08), transparent 45%)',
+            'radial-gradient(920px circle at var(--cursor-x, 10%) var(--cursor-y, 10%), rgba(100, 255, 218, 0.055), transparent 60%)',
           backgroundAttachment: 'fixed',
+          backgroundRepeat: 'no-repeat',
         },
         '::selection': {
           backgroundColor: 'rgba(100, 255, 218, 0.2)',
