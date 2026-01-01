@@ -20,6 +20,7 @@ export default function Sidebar({ sections, activeSectionId }: SidebarProps) {
   const overlineLetterSpacing = isRussian ? '0.2em' : '0.4em';
   const email = 'razanovae250@gmail.com';
   const githubUrl = 'https://github.com/anbtrfl';
+  const telegramUrl = 'https://t.me/anbtrfl';
 
   const socialLinks = [
     {
@@ -37,6 +38,15 @@ export default function Sidebar({ sections, activeSectionId }: SidebarProps) {
       icon: (
         <SvgIcon viewBox="0 0 24 24" fontSize="small">
           <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.35-1.19-3.35-1.19-.45-1.14-1.1-1.45-1.1-1.45-.9-.62.07-.61.07-.61 1 .07 1.52 1.03 1.52 1.03.9 1.54 2.36 1.1 2.94.85.09-.65.35-1.1.64-1.35-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.5 9.5 0 0 1 12 6.8c.85 0 1.7.11 2.5.32 1.9-1.29 2.74-1.02 2.74-1.02.56 1.38.21 2.4.11 2.65.64.7 1.02 1.59 1.02 2.68 0 3.84-2.35 4.68-4.59 4.93.36.31.69.93.69 1.88v2.79c0 .26.18.58.69.48A10 10 0 0 0 12 2z" />
+        </SvgIcon>
+      ),
+    },
+    {
+      label: t('sidebar.social.telegram'),
+      href: telegramUrl,
+      icon: (
+        <SvgIcon viewBox="0 0 27 27" fontSize="small">
+          <path d="M21.5 3.5a1.1 1.1 0 0 1 1.47 1.26l-3.3 15.55a1.6 1.6 0 0 1-2.31 1.07l-4.6-2.33-2.22 2.13c-.2.2-.54.06-.54-.22v-3.25l8.86-8.02c.2-.18-.04-.48-.28-.33l-11.04 6.98-4.56-1.45a1 1 0 0 1-.05-1.9z" />
         </SvgIcon>
       ),
     },

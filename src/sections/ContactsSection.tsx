@@ -8,6 +8,8 @@ export default function ContactsSection() {
   const phoneHref = 'tel:+79195087976';
   const githubUrl = 'https://github.com/anbtrfl';
   const githubLabel = 'github.com/anbtrfl';
+  const telegramUrl = 'https://t.me/anbtrfl';
+  const telegramLabel = '@anbtrfl';
 
   return (
     <section id="contacts" className="section" aria-labelledby="contacts-title">
@@ -32,6 +34,12 @@ export default function ContactsSection() {
                 {t('sections.contacts.githubLabel')}:{' '}
                 <Link href={githubUrl} target="_blank" rel="noreferrer">
                   {githubLabel}
+                </Link>
+              </Typography>
+              <Typography color="text.secondary" variant="body2">
+                {t('sections.contacts.telegramLabel')}:{' '}
+                <Link href={telegramUrl} target="_blank" rel="noreferrer">
+                  {telegramLabel}
                 </Link>
               </Typography>
               <Typography color="text.secondary" variant="body2">

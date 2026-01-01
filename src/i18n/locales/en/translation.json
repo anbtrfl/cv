@@ -20,7 +20,8 @@
     "social": {
       "email": "Email",
       "github": "GitHub",
-      "linkedin": "LinkedIn"
+      "linkedin": "LinkedIn",
+      "telegram": "Telegram"
     },
     "language": {
       "label": "Language",
@@ -119,6 +120,7 @@
       "emailLabel": "Email",
       "phoneLabel": "Phone",
       "githubLabel": "GitHub",
+      "telegramLabel": "Telegram",
       "locationLabel": "Location",
       "locationValue": "Saint Petersburg, Russia"
     },
