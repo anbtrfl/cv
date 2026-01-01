@@ -38,6 +38,19 @@ body {
 }
 
 @media (max-width: 1023px) {
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 54px;
+    z-index: 1;
+    pointer-events: none;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
   .section-title {
     position: sticky;
     top: 8px;
