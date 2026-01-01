@@ -85,13 +85,18 @@ export default function ResumePage() {
           >
             <Stack spacing={6}>
               <HeaderSection />
-              <AboutSection />
-              <SkillsSection />
-              <ExperienceSection />
-              <EducationSection />
-              <ProjectsSection />
-              <ContactsSection />
-              <FooterSection />
+              <Box>
+                <Box className="sticky-blur" aria-hidden="true" />
+                <Stack spacing={6} className="sticky-blur-content">
+                  <AboutSection />
+                  <SkillsSection />
+                  <ExperienceSection />
+                  <EducationSection />
+                  <ProjectsSection />
+                  <ContactsSection />
+                  <FooterSection />
+                </Stack>
+              </Box>
             </Stack>
           </Box>
         </Stack>

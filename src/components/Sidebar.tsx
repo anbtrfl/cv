@@ -72,7 +72,6 @@ export default function Sidebar({ sections, activeSectionId }: SidebarProps) {
         </Typography>
         <Typography
           variant="h3"
-          className="section-title"
           sx={{ mt: 1, color: 'text.primary', wordBreak: 'break-word', hyphens: 'auto' }}
         >
           {t('sidebar.name')}
