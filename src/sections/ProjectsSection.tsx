@@ -98,46 +98,6 @@ export default function ProjectsSection() {
               </Stack>
             </CardContent>
           </Card>
-
-          <Card variant="outlined" sx={cardSx} component="article">
-            <CardContent>
-              <Stack spacing={1.5}>
-                <Stack
-                  direction={{ xs: 'column', sm: 'row' }}
-                  spacing={1}
-                  justifyContent="space-between"
-                  alignItems={{ xs: 'flex-start', sm: 'center' }}
-                >
-                  <Typography variant="subtitle1" sx={{ minWidth: 0 }}>
-                    {t('sections.projects.project3.title')}
-                  </Typography>
-                  <Typography color="text.secondary" variant="caption">
-                    {t('sections.projects.project3.period')}
-                  </Typography>
-                </Stack>
-                <Typography color="text.secondary" variant="body2">
-                  {t('sections.projects.project3.summary')}
-                </Typography>
-                <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
-                  <Chip
-                    label={t('sections.projects.project3.chips.dragDrop')}
-                    size="small"
-                    variant="outlined"
-                  />
-                  <Chip
-                    label={t('sections.projects.project3.chips.uxFlows')}
-                    size="small"
-                    variant="outlined"
-                  />
-                  <Chip
-                    label={t('sections.projects.project3.chips.collaboration')}
-                    size="small"
-                    variant="outlined"
-                  />
-                </Stack>
-              </Stack>
-            </CardContent>
-          </Card>
         </Stack>
       </Stack>
     </section>

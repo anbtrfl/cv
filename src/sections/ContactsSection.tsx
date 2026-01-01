@@ -3,6 +3,11 @@ import { useTranslation } from 'react-i18next';
 
 export default function ContactsSection() {
   const { t } = useTranslation();
+  const email = 'razanovae250@gmail.com';
+  const phone = '+7 919 508-79-76';
+  const phoneHref = 'tel:+79195087976';
+  const githubUrl = 'https://github.com/anbtrfl';
+  const githubLabel = 'github.com/anbtrfl';
 
   return (
     <section id="contacts" className="section" aria-labelledby="contacts-title">
@@ -18,26 +23,19 @@ export default function ContactsSection() {
               sx={{ fontStyle: 'normal', wordBreak: 'break-word', hyphens: 'auto' }}
             >
               <Typography color="text.secondary" variant="body2">
-                {t('sections.contacts.emailLabel')}:{" "}
-                <Link href="mailto:hello@example.com">hello@example.com</Link>
+                {t('sections.contacts.emailLabel')}: <Link href={`mailto:${email}`}>{email}</Link>
               </Typography>
               <Typography color="text.secondary" variant="body2">
-                {t('sections.contacts.portfolioLabel')}:{' '}
-                <Link href="https://example.com" target="_blank" rel="noreferrer">
-                  example.com
-                </Link>
+                {t('sections.contacts.phoneLabel')}: <Link href={phoneHref}>{phone}</Link>
               </Typography>
               <Typography color="text.secondary" variant="body2">
                 {t('sections.contacts.githubLabel')}:{' '}
-                <Link href="https://github.com/username" target="_blank" rel="noreferrer">
-                  github.com/username
+                <Link href={githubUrl} target="_blank" rel="noreferrer">
+                  {githubLabel}
                 </Link>
               </Typography>
               <Typography color="text.secondary" variant="body2">
-                {t('sections.contacts.linkedinLabel')}:{' '}
-                <Link href="https://linkedin.com/in/username" target="_blank" rel="noreferrer">
-                  linkedin.com/in/username
-                </Link>
+                {t('sections.contacts.locationLabel')}: {t('sections.contacts.locationValue')}
               </Typography>
             </Stack>
           </CardContent>

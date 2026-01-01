@@ -14,9 +14,9 @@
   },
   "sidebar": {
     "resume": "Resume",
-    "name": "Candidate Name",
+    "name": "Ekaterina Ryazanova",
     "role": "Frontend Developer",
-    "summary": "Building calm, accessible interfaces and scalable UI systems for product teams.",
+    "summary": "Frontend developer focused on maintainable UI architecture, performance optimization, and authenticated user flows.",
     "social": {
       "email": "Email",
       "github": "GitHub",
@@ -32,109 +32,100 @@
   },
   "sections": {
     "header": {
-      "overline": "Profile",
+      "overline": "Last updated in Dec 2025",
       "title": "Overview",
-      "summary": "Frontend engineer focused on accessible UI systems, thoughtful product flows, and clean component APIs that scale across teams.",
+      "summary": "Frontend developer with commercial experience building React and Next.js applications. Focused on maintainable UI architecture, performance optimization, and robust authenticated user flows.",
       "chips": {
-        "designSystems": "Design systems",
-        "accessibility": "Accessibility",
-        "productUx": "Product UX"
+        "designSystems": "UI architecture",
+        "accessibility": "Performance",
+        "productUx": "Auth flows"
       }
     },
     "about": {
       "title": "About",
-      "body1": "Frontend developer with experience across SaaS platforms, analytics suites, and internal tools. Focused on reliable UI architecture and collaboration between product, design, and engineering.",
-      "body2": "Interested in performance, accessibility, and building interfaces that feel calm, fast, and consistent for users."
+      "body1": "Built internationalized React and Next.js marketing websites (SSR/SSG) from Figma with reusable components and improved Lighthouse metrics.",
+      "body2": "Optimized performance by removing redundant JavaScript chunks, reducing network requests, and improving media delivery; integrated backend APIs with Keycloak authentication and robust loading and error handling."
     },
     "skills": {
       "title": "Skills",
       "frontend": "Frontend",
-      "frontendBody1": "React 18, TypeScript, Vite, component architecture, state patterns.",
-      "frontendBody2": "Semantic HTML, accessibility-first UI, responsive layouts.",
-      "workflow": "Workflow",
-      "workflowBody1": "API integration, data modeling, form orchestration, documentation.",
-      "workflowBody2": "Testing mindset, code reviews, design collaboration."
+      "frontendBody1": "HTML5, CSS3, JavaScript (ES6+).",
+      "frontendBody2": "React, Next.js (SSR/SSG), TypeScript.",
+      "workflow": "Layout & UI",
+      "workflowBody1": "Material UI, responsive design, accessibility.",
+      "workflowBody2": "Git, npm, Figma, DevTools."
     },
     "experience": {
       "title": "Experience",
       "role1": {
-        "title": "Senior Frontend Engineer · Product Platform",
-        "period": "2021 — Present",
-        "summary": "Led UI platform work for a multi-team SaaS suite, building shared components, navigation patterns, and theming primitives for consistent delivery.",
+        "title": "Frontend Developer · EXPLYT, VEAI",
+        "period": "Apr 2025 – present",
+        "summary": "Worked on frontend development for a commercial AI-powered IDE plugin, covering SEO-oriented marketing websites and authenticated user interfaces. Built internationalized React/Next.js sites with reusable components; improved Lighthouse metrics, performance, caching, and media delivery; integrated backend APIs and Keycloak auth with robust loading and error handling.",
         "chips": {
-          "designSystem": "Design system",
+          "designSystem": "React/Next.js",
           "performance": "Performance",
-          "accessibility": "Accessibility"
+          "accessibility": "Auth UI"
         }
       },
       "role2": {
-        "title": "Frontend Engineer · Analytics Suite",
-        "period": "2018 — 2021",
-        "summary": "Built data-heavy dashboards with configurable widgets, improving clarity for finance and operations teams while keeping interfaces fast.",
+        "title": "Frontend Course Mentor · ITMO University",
+        "period": "Sept 2025 – present",
+        "summary": "Mentored undergraduate students in frontend development with a focus on layout correctness, JavaScript fundamentals, and practical engineering skills. Reviewed assignments with structured feedback on semantic HTML, CSS organization, layout accuracy, and JavaScript logic; designed a pixel-perfect layout assignment with automated visual tests.",
         "chips": {
-          "dataViz": "Data viz",
-          "roleBasedUi": "Role-based UI",
-          "designOps": "Design ops"
+          "dataViz": "Mentoring",
+          "roleBasedUi": "Reviews",
+          "designOps": "Visual tests"
         }
       }
     },
     "education": {
       "title": "Education",
       "degree": {
-        "title": "B.Sc. in Computer Science",
-        "period": "2014 — 2018",
-        "summary": "Focus on human-computer interaction, software architecture, and applied problem-solving."
+        "title": "ITMO University, BS in Computer Technologies",
+        "period": "Sept 2022 – present",
+        "summary": "Undergraduate program in computer technologies."
       },
       "courses": {
-        "title": "Professional Courses",
-        "period": "2019 — 2023",
-        "summary": "Web performance, accessible design, advanced TypeScript practices."
+        "title": "Relevant Courses",
+        "period": "",
+        "summary": "Frontend Development Advanced Course; Web Development; Algorithms and Data Structures; JavaScript Course."
       }
     },
     "projects": {
       "title": "Projects",
       "project1": {
-        "title": "Insight Dashboard",
-        "period": "2024",
-        "summary": "Modular analytics interface with reusable filters, chart primitives, and export flows tailored for operations teams.",
+        "title": "React Course Platform",
+        "period": "",
+        "summary": "Educational web platform for hosting React courses with hierarchical structure (courses, modules, lectures). Designed a reusable component architecture and implemented typed data access with backend emulation for predictable state management and independent frontend development.",
         "chips": {
           "react": "React",
-          "typescript": "TypeScript",
-          "rest": "REST APIs"
+          "typescript": "Component architecture",
+          "rest": "Typed data"
         }
       },
       "project2": {
-        "title": "Design System Starter",
-        "period": "2023",
-        "summary": "Component library foundation with tokens, accessible patterns, and documentation templates for fast onboarding.",
+        "title": "Project Management System",
+        "period": "",
+        "summary": "Frontend application for managing projects and tasks using board-based workflows. Built status-driven columns with smooth client-side navigation and implemented drag-and-drop flows with search, filtering, async data handling, and robust error states.",
         "chips": {
-          "uiKit": "UI kit",
-          "docs": "Docs",
-          "accessibility": "Accessibility"
-        }
-      },
-      "project3": {
-        "title": "Workflow Builder",
-        "period": "2022",
-        "summary": "Visual editor for multi-step automation flows, featuring validation states and stakeholder-ready previews.",
-        "chips": {
-          "dragDrop": "Drag and drop",
-          "uxFlows": "UX flows",
-          "collaboration": "Collaboration"
+          "uiKit": "Drag and drop",
+          "docs": "Async data",
+          "accessibility": "Search & filtering"
         }
       }
     },
     "contacts": {
       "title": "Contacts",
       "emailLabel": "Email",
-      "portfolioLabel": "Portfolio",
+      "phoneLabel": "Phone",
       "githubLabel": "GitHub",
-      "linkedinLabel": "LinkedIn"
+      "locationLabel": "Location",
+      "locationValue": "Saint Petersburg, Russia"
     },
     "footer": {
-      "title": "Footer",
-      "body1": "References available upon request. Open to remote and hybrid opportunities.",
-      "body2": "Built with React, TypeScript, and a focus on accessible UX."
+      "title": "Last updated",
+      "body1": "Dec 2025.",
+      "body2": "Saint Petersburg, Russia."
     }
   }
 }
