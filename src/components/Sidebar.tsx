@@ -21,8 +21,10 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
   const email = 'razanovae250@gmail.com';
   const githubUrl = 'https://github.com/anbtrfl';
   const telegramUrl = 'https://t.me/anbtrfl';
+  const resumeUrl = 'https://anbtrfl.ru/Ekaterina_Ryazanova_CV.pdf';
   const firstName = t('sidebar.firstName');
   const lastName = t('sidebar.lastName');
+  const resumeLabel = t('sidebar.fullResume');
 
   const socialLinks = [
     {
@@ -134,6 +136,39 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
         >
           {t("sidebar.summary")}
         </Typography>
+        <Link
+          component="a"
+          href={resumeUrl}
+          aria-label={resumeLabel}
+          target="_blank"
+          rel="noreferrer"
+          sx={{
+            mt: 2.5,
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 0,
+            fontSize: "0.85rem",
+            fontWeight: 500,
+            letterSpacing: "0.04em",
+            color: "text.secondary",
+            transition: "color 0.2s ease, text-shadow 0.2s ease",
+            "& svg": {
+              transition: "transform 0.2s ease",
+            },
+            "&:hover": {
+              color: "secondary.main",
+              textShadow: "0 0 12px rgba(100, 255, 218, 0.6)",
+            },
+            "&:hover svg": {
+              transform: "translate(2px, -2px)",
+            },
+          }}
+        >
+          {resumeLabel}
+          <SvgIcon viewBox="0 0 36 36" fontSize="small">
+            <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
+          </SvgIcon>
+        </Link>
       </Box>
 
       <Stack
