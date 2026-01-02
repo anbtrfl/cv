@@ -101,9 +101,9 @@
     "education": {
       "title": "Education",
       "degree": {
-        "title": "ITMO University, BS in Computer Technologies",
+        "title": "ITMO University",
         "period": "Sept 2022 – present",
-        "summary": "Undergraduate program in computer technologies."
+        "summary": "BS in Computer Technologies"
       },
       "courses": {
         "title": "Relevant coursework",

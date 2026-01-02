@@ -50,7 +50,7 @@ export default function EducationSection() {
                     gap: 2,
                     width: '100%',
                     textAlign: 'center',
-                    '&::before, &::after': {
+                    '&::after': {
                       content: '""',
                       flex: 1,
                       height: '1px',

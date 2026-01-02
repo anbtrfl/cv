@@ -101,9 +101,9 @@ export default function ResumePage() {
   }, [sections]);
 
   return (
-    <Box sx={{ minHeight: '100vh' }}>
+    <Box sx={{ minHeight: "100vh" }}>
       <a href="#content" className="skip-link">
-        {t('actions.skipToContent')}
+        {t("actions.skipToContent")}
       </a>
       <Container maxWidth="lg" sx={{ py: { xs: 6, lg: 10 } }}>
         <Stack
@@ -111,10 +111,10 @@ export default function ResumePage() {
           spacing={{ xs: 6, lg: 12 }}
           alignItems={{ xs: 'stretch', lg: 'flex-start' }}
         >
-          <Box sx={{ width: { xs: '100%', lg: 280 }, flexShrink: 0 }}>
+          <Box sx={{ width: { xs: "100%", lg: 280 }, flexShrink: 0 }}>
             <Box
               sx={{
-                position: { lg: 'fixed' },
+                position: { lg: "fixed" },
                 top: { lg: 80 },
                 width: { lg: 280 },
               }}
