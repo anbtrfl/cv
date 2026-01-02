@@ -18,7 +18,6 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
   const currentLanguage = i18n.resolvedLanguage ?? i18n.language;
   const isRussian = currentLanguage?.startsWith('ru');
   const navLetterSpacing = isRussian ? '0.16em' : '0.3em';
-  const overlineLetterSpacing = isRussian ? '0.2em' : '0.4em';
   const email = 'razanovae250@gmail.com';
   const githubUrl = 'https://github.com/anbtrfl';
   const telegramUrl = 'https://t.me/anbtrfl';
@@ -98,7 +97,7 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
               letterSpacing: "0.02em",
               lineHeight: 1.1,
               color: "white",
-              wordBreak: "break-word",
+              wordBreak: "keep-all",
               hyphens: "auto",
             }}
           >
@@ -112,8 +111,7 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
               maxWidth: "100%",
               fontSize: { xs: "2.4rem", sm: "2.8rem", lg: "2.4rem" },
               fontWeight: 400,
-              letterSpacing: "0.02em",
-              lineHeight: 1.1,
+              letterSpacing: { xs: "0.1em", sm: "0.1em", lg: "auto" },
               color: "white",
               wordBreak: "break-word",
               hyphens: "auto",

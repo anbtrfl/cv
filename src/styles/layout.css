@@ -89,6 +89,18 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  body {
+    background-image: none !important;
+  }
+
+
+
+  .MuiCard-root {
+    border: 1px solid rgba(100, 255, 218, 0.6);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -41,7 +41,23 @@ export default function EducationSection() {
               </Stack>
 
               <Stack spacing={1.5}>
-                <Typography color="text.secondary" variant="subtitle2">
+                <Typography
+                  color="text.secondary"
+                  variant="subtitle2"
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 2,
+                    width: '100%',
+                    textAlign: 'center',
+                    '&::before, &::after': {
+                      content: '""',
+                      flex: 1,
+                      height: '1px',
+                      backgroundColor: 'rgba(148, 163, 184, 0.35)',
+                    },
+                  }}
+                >
                   {t('sections.education.courses.title')}
                 </Typography>
                 <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">

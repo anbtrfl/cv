@@ -7,8 +7,9 @@ export default function App() {
   useEffect(() => {
     const root = document.documentElement;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isSmallScreen = window.matchMedia('(max-width: 600px)').matches;
 
-    if (prefersReducedMotion) {
+    if (prefersReducedMotion || isSmallScreen) {
       return;
     }
 

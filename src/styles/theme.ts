@@ -58,10 +58,16 @@ const theme = createTheme({
     },
     subtitle2: {
       fontFamily: '"Montserrat", sans-serif',
-      fontSize: "1.8rem",
+      fontSize: "1.2rem",
+      letterSpacing: "0.1em",
     },
     caption: {
       fontFamily: '"Montserrat", sans-serif',
+    },
+    body1: {
+      fontFamily: '"Montserrat", sans-serif',
+      fontSize: "1rem",
+      fontWeight: 400,
     },
     body2: {
       fontSize: "0.95rem",
