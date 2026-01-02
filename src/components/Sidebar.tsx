@@ -58,7 +58,7 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
 
   const languageButtonSx = (isActive: boolean) => ({
     minWidth: 44,
-    fontWeight: 600,
+    fontWeight: 500,
     fontSize: '0.7rem',
     letterSpacing: '0.18em',
     borderColor: isActive ? 'secondary.main' : 'divider',
@@ -112,7 +112,7 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
               flex: "0 0 auto",
               maxWidth: "100%",
               fontSize: { xs: "2.4rem", sm: "2.8rem", lg: "2.4rem" },
-              fontWeight: 400,
+              fontWeight: 500,
               letterSpacing: { xs: "0.1em", sm: "0.1em", lg: "auto" },
               color: "white",
               wordBreak: "break-word",
@@ -165,7 +165,7 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
           }}
         >
           {resumeLabel}
-          <SvgIcon viewBox="0 0 36 36" fontSize="small">
+          <SvgIcon viewBox="0 0 36 18" fontSize="small">
             <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z" />
           </SvgIcon>
         </Link>

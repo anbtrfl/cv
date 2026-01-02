@@ -33,25 +33,25 @@ const theme = createTheme({
     h1: {
       fontFamily: '"Montserrat", sans-serif',
       fontSize: "2.4rem",
-      fontWeight: 600,
+      fontWeight: 500,
       letterSpacing: "-0.02em",
     },
     h2: {
       fontFamily: '"Montserrat", sans-serif',
       fontSize: "1.35rem",
-      fontWeight: 600,
+      fontWeight: 500,
       letterSpacing: "0.01em",
     },
     h3: {
       fontFamily: '"Montserrat", sans-serif',
       fontSize: "1.9rem",
-      fontWeight: 600,
+      fontWeight: 500,
       letterSpacing: "-0.02em",
     },
     subtitle1: {
       fontFamily: '"Montserrat", sans-serif',
       fontSize: "1.2rem",
-      fontWeight: 600,
+      fontWeight: 500,
     },
     overline: {
       fontFamily: '"Montserrat", sans-serif',
@@ -64,11 +64,7 @@ const theme = createTheme({
     caption: {
       fontFamily: '"Montserrat", sans-serif',
     },
-    body1: {
-      fontFamily: '"Montserrat", sans-serif',
-      fontSize: "1rem",
-      fontWeight: 400,
-    },
+
     body2: {
       fontSize: "0.95rem",
       lineHeight: 1.7,
