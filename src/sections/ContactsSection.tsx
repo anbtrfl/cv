@@ -14,7 +14,7 @@ export default function ContactsSection() {
   return (
     <section id="contacts" className="section" aria-labelledby="contacts-title">
       <Stack spacing={2}>
-        <Typography variant="h2" id="contacts-title" className="section-title">
+        <Typography id="contacts-title" className="section-title">
           {t('sections.contacts.title')}
         </Typography>
         <Card variant="outlined">

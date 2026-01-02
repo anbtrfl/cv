@@ -20,7 +20,6 @@ export default function ExperienceSection() {
     >
       <Stack spacing={2}>
         <Typography
-          variant="h2"
           id="experience-title"
           className="section-title"
         >

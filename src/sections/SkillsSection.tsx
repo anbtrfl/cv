@@ -54,7 +54,7 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="section" aria-labelledby="skills-title">
       <Stack spacing={2}>
-        <Typography variant="h2" id="skills-title" className="section-title">
+        <Typography id="skills-title" className="section-title">
           {t("sections.skills.title")}
         </Typography>
         <Typography

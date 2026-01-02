@@ -90,7 +90,7 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
             letterSpacing: '0.02em',
             lineHeight: 1.1,
             color: 'transparent',
-            WebkitTextStroke: '1.5px rgba(100, 255, 218, 0.9)',
+            WebkitTextStroke: '1.5px rgba(255, 255, 255, 0.9)',
             
             wordBreak: 'break-word',
             hyphens: 'auto',

@@ -15,7 +15,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="section" aria-labelledby="projects-title">
       <Stack spacing={2}>
-        <Typography variant="h2" id="projects-title" className="section-title">
+        <Typography id="projects-title" className="section-title">
           {t("sections.projects.title")}
         </Typography>
         <Typography

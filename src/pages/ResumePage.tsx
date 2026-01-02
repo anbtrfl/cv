@@ -109,7 +109,7 @@ export default function ResumePage() {
         <Stack
           direction={{ xs: 'column', lg: 'row' }}
           spacing={{ xs: 6, lg: 12 }}
-          alignItems="flex-start"
+          alignItems={{ xs: 'stretch', lg: 'flex-start' }}
         >
           <Box sx={{ width: { xs: '100%', lg: 280 }, flexShrink: 0 }}>
             <Box
