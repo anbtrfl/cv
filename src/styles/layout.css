@@ -15,6 +15,11 @@ body {
   scroll-margin-top: 96px;
 }
 
+.section-title,
+.section-title-card {
+  font-family: "Montserrat", sans-serif;
+}
+
 .section-title-card {
   display: none;
 }

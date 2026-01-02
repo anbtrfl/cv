@@ -22,6 +22,8 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
   const email = 'razanovae250@gmail.com';
   const githubUrl = 'https://github.com/anbtrfl';
   const telegramUrl = 'https://t.me/anbtrfl';
+  const firstName = t('sidebar.firstName');
+  const lastName = t('sidebar.lastName');
 
   const socialLinks = [
     {
@@ -75,37 +77,64 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
   return (
     <Stack spacing={4}>
       <Box>
-        <Typography
-          variant="overline"
-          sx={{ color: 'secondary.main', letterSpacing: overlineLetterSpacing }}
-        >
-          {t('sidebar.resume')}
-        </Typography>
-        <Typography
-          variant="h3"
+        <Box
           sx={{
             mt: 1,
-            fontSize: { xs: '2.4rem', sm: '2.8rem', lg: '3.2rem' },
-            fontWeight: 600,
-            letterSpacing: '0.02em',
-            lineHeight: 1.1,
-            color: 'transparent',
-            WebkitTextStroke: '1.5px rgba(255, 255, 255, 0.9)',
-            
-            wordBreak: 'break-word',
-            hyphens: 'auto',
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "baseline",
+            columnGap: 1.6,
+            rowGap: 0.6,
           }}
         >
-          {t('sidebar.name')}
-        </Typography>
-        <Typography variant="subtitle1" sx={{ mt: 1, color: 'text.secondary' }}>
-          {t('sidebar.role')}
+          <Typography
+            variant="h3"
+            component="div"
+            sx={{
+              flex: "0 0 auto",
+              maxWidth: "100%",
+              fontSize: { xs: "2.4rem", sm: "2.8rem", lg: "3.2rem" },
+              fontWeight: 900,
+              letterSpacing: "0.02em",
+              lineHeight: 1.1,
+              color: "white",
+              wordBreak: "break-word",
+              hyphens: "auto",
+            }}
+          >
+            {firstName}
+          </Typography>
+          <Typography
+            variant="h3"
+            component="div"
+            sx={{
+              flex: "0 0 auto",
+              maxWidth: "100%",
+              fontSize: { xs: "2.4rem", sm: "2.8rem", lg: "2.4rem" },
+              fontWeight: 400,
+              letterSpacing: "0.02em",
+              lineHeight: 1.1,
+              color: "white",
+              wordBreak: "break-word",
+              hyphens: "auto",
+            }}
+          >
+            {lastName}
+          </Typography>
+        </Box>
+        <Typography variant="subtitle1" sx={{ mt: 1, color: "secondary.main" }}>
+          {t("sidebar.role")}
         </Typography>
         <Typography
           variant="body2"
-          sx={{ mt: 2, color: 'text.secondary', wordBreak: 'break-word', hyphens: 'auto' }}
+          sx={{
+            mt: 2,
+            color: "text.secondary",
+            wordBreak: "break-word",
+            hyphens: "auto",
+          }}
         >
-          {t('sidebar.summary')}
+          {t("sidebar.summary")}
         </Typography>
       </Box>
 
@@ -113,7 +142,7 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
         component="nav"
         spacing={1.5}
         aria-label="Section navigation"
-        sx={{ display: { xs: 'none', lg: 'flex' } }}
+        sx={{ display: { xs: "none", lg: "flex" } }}
       >
         {sections.map((section) => {
           const isActive = section.id === activeSectionId;
@@ -122,32 +151,32 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
             <Link
               key={section.id}
               href={`#${section.id}`}
-              aria-current={isActive ? 'true' : undefined}
+              aria-current={isActive ? "true" : undefined}
               onClick={() => onSectionSelect?.(section.id)}
               sx={{
-                display: 'flex',
-                alignItems: 'center',
+                display: "flex",
+                alignItems: "center",
                 gap: 1.5,
-                textTransform: 'uppercase',
+                textTransform: "uppercase",
                 letterSpacing: navLetterSpacing,
-                fontSize: '0.68rem',
+                fontSize: "0.68rem",
                 lineHeight: 1.4,
-                whiteSpace: 'normal',
-                wordBreak: 'break-word',
-                color: isActive ? 'secondary.main' : 'text.secondary',
-                transition: 'color 0.2s ease',
-                '&:hover': {
-                  color: 'text.primary',
+                whiteSpace: "normal",
+                wordBreak: "break-word",
+                color: isActive ? "secondary.main" : "text.secondary",
+                transition: "color 0.2s ease",
+                "&:hover": {
+                  color: "text.primary",
                 },
               }}
             >
               <Box
                 component="span"
                 sx={{
-                  height: '1px',
+                  height: "1px",
                   width: isActive ? 48 : 28,
-                  bgcolor: isActive ? 'secondary.main' : 'divider',
-                  transition: 'width 0.2s ease, background-color 0.2s ease',
+                  bgcolor: isActive ? "secondary.main" : "divider",
+                  transition: "width 0.2s ease, background-color 0.2s ease",
                 }}
               />
               {section.label}
@@ -164,9 +193,9 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
           <Button
             type="button"
             variant="outlined"
-            aria-label={t('sidebar.language.switchToEnglish')}
+            aria-label={t("sidebar.language.switchToEnglish")}
             aria-pressed={!isRussian}
-            onClick={() => handleLanguageChange('en')}
+            onClick={() => handleLanguageChange("en")}
             sx={languageButtonSx(!isRussian)}
           >
             EN
@@ -174,9 +203,9 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
           <Button
             type="button"
             variant="outlined"
-            aria-label={t('sidebar.language.switchToRussian')}
+            aria-label={t("sidebar.language.switchToRussian")}
             aria-pressed={isRussian}
-            onClick={() => handleLanguageChange('ru')}
+            onClick={() => handleLanguageChange("ru")}
             sx={languageButtonSx(isRussian)}
           >
             RU
@@ -193,16 +222,16 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
             aria-label={link.label}
             size="small"
             sx={{
-              color: 'text.secondary',
-              border: '1px solid',
-              borderColor: 'divider',
-              '&:hover': {
-                color: 'secondary.main',
-                borderColor: 'secondary.main',
+              color: "text.secondary",
+              border: "1px solid",
+              borderColor: "divider",
+              "&:hover": {
+                color: "secondary.main",
+                borderColor: "secondary.main",
               },
             }}
-            target={link.href.startsWith('http') ? '_blank' : undefined}
-            rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
+            target={link.href.startsWith("http") ? "_blank" : undefined}
+            rel={link.href.startsWith("http") ? "noreferrer" : undefined}
           >
             {link.icon}
           </IconButton>
