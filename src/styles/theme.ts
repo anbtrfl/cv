@@ -75,9 +75,27 @@ const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          borderColor: 'rgba(148, 163, 184, 0.25)',
+          position: 'relative',
+          overflow: 'hidden',
+          borderColor: 'transparent',
           backgroundImage: 'none',
-          backgroundColor: 'rgba(15, 23, 42, 0.7)',
+          backgroundColor: 'transparent',
+          transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
+          '&::before': {
+            content: '""',
+            position: 'absolute',
+            inset: 0,
+            borderRadius: 'inherit',
+            padding: '1px',
+            background:
+              'radial-gradient(260px circle at var(--cursor-x, 0px) var(--cursor-y, 0px), rgba(100, 255, 218, 0.9), transparent 65%), linear-gradient(rgba(148, 163, 184, 0.35), rgba(148, 163, 184, 0.35))',
+            backgroundAttachment: 'fixed',
+            WebkitMask:
+              'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+            WebkitMaskComposite: 'xor',
+            maskComposite: 'exclude',
+            pointerEvents: 'none',
+          },
         },
       },
     },
@@ -104,9 +122,9 @@ const theme = createTheme({
           transition:
             'color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease',
           '&:hover': {
-            color: '#64ffda',
-            borderColor: '#64ffda',
-            backgroundColor: 'transparent',
+            color: 'inherit',
+            borderColor: 'rgba(148, 163, 184, 0.35)',
+            backgroundColor: 'rgba(148, 163, 184, 0.12)',
           },
         },
       },

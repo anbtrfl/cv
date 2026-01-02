@@ -19,32 +19,37 @@ export default function ContactsSection() {
         </Typography>
         <Card variant="outlined">
           <CardContent>
-            <Stack
-              component="address"
-              spacing={1}
-              sx={{ fontStyle: 'normal', wordBreak: 'break-word', hyphens: 'auto' }}
-            >
-              <Typography color="text.secondary" variant="body2">
-                {t('sections.contacts.emailLabel')}: <Link href={`mailto:${email}`}>{email}</Link>
+            <Stack spacing={1.5}>
+              <Typography className="section-title-card" aria-hidden="true">
+                {t('sections.contacts.title')}
               </Typography>
-              <Typography color="text.secondary" variant="body2">
-                {t('sections.contacts.phoneLabel')}: <Link href={phoneHref}>{phone}</Link>
-              </Typography>
-              <Typography color="text.secondary" variant="body2">
-                {t('sections.contacts.githubLabel')}:{' '}
-                <Link href={githubUrl} target="_blank" rel="noreferrer">
-                  {githubLabel}
-                </Link>
-              </Typography>
-              <Typography color="text.secondary" variant="body2">
-                {t('sections.contacts.telegramLabel')}:{' '}
-                <Link href={telegramUrl} target="_blank" rel="noreferrer">
-                  {telegramLabel}
-                </Link>
-              </Typography>
-              <Typography color="text.secondary" variant="body2">
-                {t('sections.contacts.locationLabel')}: {t('sections.contacts.locationValue')}
-              </Typography>
+              <Stack
+                component="address"
+                spacing={1}
+                sx={{ fontStyle: 'normal', wordBreak: 'break-word', hyphens: 'auto' }}
+              >
+                <Typography color="text.secondary" variant="body2">
+                  {t('sections.contacts.emailLabel')}: <Link href={`mailto:${email}`}>{email}</Link>
+                </Typography>
+                <Typography color="text.secondary" variant="body2">
+                  {t('sections.contacts.phoneLabel')}: <Link href={phoneHref}>{phone}</Link>
+                </Typography>
+                <Typography color="text.secondary" variant="body2">
+                  {t('sections.contacts.githubLabel')}:{' '}
+                  <Link href={githubUrl} target="_blank" rel="noreferrer">
+                    {githubLabel}
+                  </Link>
+                </Typography>
+                <Typography color="text.secondary" variant="body2">
+                  {t('sections.contacts.telegramLabel')}:{' '}
+                  <Link href={telegramUrl} target="_blank" rel="noreferrer">
+                    {telegramLabel}
+                  </Link>
+                </Typography>
+                <Typography color="text.secondary" variant="body2">
+                  {t('sections.contacts.locationLabel')}: {t('sections.contacts.locationValue')}
+                </Typography>
+              </Stack>
             </Stack>
           </CardContent>
         </Card>

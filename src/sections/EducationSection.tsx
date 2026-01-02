@@ -18,6 +18,9 @@ export default function EducationSection() {
         <Card variant="outlined" component="article">
           <CardContent>
             <Stack spacing={2}>
+              <Typography className="section-title-card" aria-hidden="true">
+                {t('sections.education.title')}
+              </Typography>
               <Stack spacing={1.5}>
                 <Stack
                   direction={{ xs: 'column', sm: 'row' }}

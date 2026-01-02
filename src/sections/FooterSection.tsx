@@ -13,6 +13,9 @@ export default function FooterSection() {
         <Card variant="outlined">
           <CardContent>
             <Stack spacing={1}>
+              <Typography className="section-title-card" aria-hidden="true">
+                {t('sections.footer.title')}
+              </Typography>
               <Typography color="text.secondary" variant="body2">
                 {t('sections.footer.body1')}
               </Typography>

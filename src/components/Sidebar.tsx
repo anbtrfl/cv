@@ -83,7 +83,18 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
         </Typography>
         <Typography
           variant="h3"
-          sx={{ mt: 1, color: 'text.primary', wordBreak: 'break-word', hyphens: 'auto' }}
+          sx={{
+            mt: 1,
+            fontSize: { xs: '2.4rem', sm: '2.8rem', lg: '3.2rem' },
+            fontWeight: 600,
+            letterSpacing: '0.02em',
+            lineHeight: 1.1,
+            color: 'transparent',
+            WebkitTextStroke: '1.5px rgba(100, 255, 218, 0.9)',
+            
+            wordBreak: 'break-word',
+            hyphens: 'auto',
+          }}
         >
           {t('sidebar.name')}
         </Typography>
@@ -146,9 +157,9 @@ export default function Sidebar({ sections, activeSectionId, onSectionSelect }: 
       </Stack>
 
       <Stack spacing={1.5}>
-        <Typography variant="overline" sx={{ color: 'text.secondary', letterSpacing: '0.2em' }}>
+        {/* <Typography variant="overline" sx={{ color: 'text.secondary', letterSpacing: '0.2em' }}>
           {t('sidebar.language.label')}
-        </Typography>
+        </Typography> */}
         <Stack direction="row" spacing={1}>
           <Button
             type="button"

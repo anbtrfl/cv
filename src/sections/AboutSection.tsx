@@ -13,6 +13,9 @@ export default function AboutSection() {
         <Card variant="outlined">
           <CardContent>
             <Stack spacing={2}>
+              <Typography className="section-title-card" aria-hidden="true">
+                {t('sections.about.title')}
+              </Typography>
               <Typography color="text.secondary" variant="body2">
                 {t('sections.about.body1')}
               </Typography>
